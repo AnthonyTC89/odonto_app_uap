@@ -1,34 +1,38 @@
+.container {
+  max-width: 95%;
+}
+
 .header-title {
-    font-size: 5rem
+  font-size: 5rem
 }
 
 .picture-logo {
-    max-width: 1rem;
+  max-width: 1rem;
 }
 
 .footer-social,
 .info-list,
 .editions-list {
-    list-style: none;
+  list-style: none;
 }
 
 .info-list li:last-child,
 .editions-list li:last-child {
-    border-right: none
+  border-right: none
 }
 
 .info-list li a,
 .editions-list li a {
-    color: #6C757D;
-    font-size: .8rem;
+  color: #6C757D;
+  font-size: .8rem;
 }
 
 .social-icon {
-    width: 2rem;
-    height: auto;
-    filter: grayscale(100%);
+  width: 2rem;
+  height: auto;
+  filter: grayscale(100%);
 }
 
 .social-icon:hover {
-    filter: grayscale(0%);
+  filter: grayscale(0%);
 }
