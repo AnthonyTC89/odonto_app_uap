@@ -1,5 +1,5 @@
 .container {
-
+max-width: 95%;
 }
 
 .header-title {
@@ -8,6 +8,9 @@
 
 .picture-logo {
   max-width: 2rem;
+}
+.cara{
+  font-size: .7rem;
 }
 
 .footer-social,
@@ -44,6 +47,9 @@
   }
   .social-icon {
     width: 2rem;
+  }
+  .cara, .dentadura{
+    font-size: 1.5rem;
   }
 }
 
