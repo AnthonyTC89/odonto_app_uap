@@ -1,13 +1,16 @@
 .container {
-  max-width: 95%;
+max-width: 95%;
 }
 
 .header-title {
-  font-size: 5rem
+  font-size: 1.5rem;
 }
 
 .picture-logo {
-  max-width: 1rem;
+  max-width: 2rem;
+}
+.cara{
+  font-size: .7rem;
 }
 
 .footer-social,
@@ -28,11 +31,45 @@
 }
 
 .social-icon {
-  width: 2rem;
+  width: 1rem;
   height: auto;
   filter: grayscale(100%);
 }
 
 .social-icon:hover {
   filter: grayscale(0%);
+}
+
+/* Small devices (desktops, 576px and up) */
+@media (min-width: 576px){
+  .header-title {
+    font-size: 2.5rem;
+  }
+  .social-icon {
+    width: 2rem;
+  }
+  .cara, .dentadura{
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .header-title {
+    font-size: 4rem;
+  }
+}
+
+/* Extra Large devices (desktops, 992px and up) */
+@media (min-width: 1200px) {
+  .header-title {
+    font-size: 6rem;
+  }
 }
