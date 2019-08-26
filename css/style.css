@@ -1,0 +1,75 @@
+.container {
+max-width: 95%;
+}
+
+.header-title {
+  font-size: 1.5rem;
+}
+
+.picture-logo {
+  max-width: 2rem;
+}
+.cara{
+  font-size: .7rem;
+}
+
+.footer-social,
+.info-list,
+.editions-list {
+  list-style: none;
+}
+
+.info-list li:last-child,
+.editions-list li:last-child {
+  border-right: none
+}
+
+.info-list li a,
+.editions-list li a {
+  color: #6C757D;
+  font-size: .8rem;
+}
+
+.social-icon {
+  width: 1rem;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.social-icon:hover {
+  filter: grayscale(0%);
+}
+
+/* Small devices (desktops, 576px and up) */
+@media (min-width: 576px){
+  .header-title {
+    font-size: 2.5rem;
+  }
+  .social-icon {
+    width: 2rem;
+  }
+  .cara, .dentadura{
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .header-title {
+    font-size: 4rem;
+  }
+}
+
+/* Extra Large devices (desktops, 992px and up) */
+@media (min-width: 1200px) {
+  .header-title {
+    font-size: 6rem;
+  }
+}
