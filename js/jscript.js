@@ -26,7 +26,7 @@ function BtnTooth_Clicked (event){
 
 function BtnSurface_Clicked (event){
     if (toothPress != ""){
-        surfacePress = event.srcElement.value;
+        surfacePress = event.srcElement.value.toLowerCase();
         ShowImageTooth();
     }
 }
@@ -37,7 +37,7 @@ function ShowImageTooth() {
         document.getElementById("img_main").alt = "dentadura_completa";
     }
     else{
-        document.getElementById("img_main").src = "images/"+ toothPress + "/" + surfacePress  + ".jpg";
+        document.getElementById("img_main").src = "images/teeth/"+ toothPress + "/" + surfacePress  + ".jpg";
         document.getElementById("img_main").alt = toothPress + "_" + surfacePress;
     }
 }
