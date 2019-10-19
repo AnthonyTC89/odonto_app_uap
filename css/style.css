@@ -9,7 +9,7 @@ max-width: 95%;
 .picture-logo {
   max-width: 2rem;
 }
-.cara{
+.tooth-surface{
   font-size: .7rem;
 }
 
@@ -48,7 +48,7 @@ max-width: 95%;
   .social-icon {
     width: 2rem;
   }
-  .cara, .dentadura{
+  .tooth-surface, .teeth{
     font-size: 1.5rem;
   }
 }
