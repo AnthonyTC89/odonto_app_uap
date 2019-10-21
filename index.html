@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -29,21 +30,7 @@
                 </picture>
             </div>
         </div>
-        <!-- <nav class="navbar navbar-light navbar-expand-lg ">
-            <div class="collapse navbar-collapse border-bottom" id="navbarTogglerDemo01">
-                <div class="navbar-nav bg-danger d-flex align-items-end">
-                    <a class="nav-item nav-link text-white font-weight-bold" href="#">Glosario</a>
-                    <a class="nav-item nav-link text-white font-weight-bold" href="#">App</a>
-                </div>
-            </div>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav> -->
     </header>
-
     <main class="container">
         <div class="row">
             <aside class="info col-12 col-md-6 col-lg-2 order-12 order-md-10 order-lg-1">
@@ -77,7 +64,7 @@
             <section class="col-12 col-lg-8 order-1 order-lg-2 container ">
                 <div class="row my-3">
                     <div class="col-12 d-flex justify-content-center">
-                        <input id="btn_teeth" type="button" class ="teeth" value="Dentadura Completa">
+                        <input id="btn_teeth" type="button" class="teeth" value="Dentadura Completa">
                     </div>
                 </div>
                 <div class="row my-3">
@@ -150,6 +137,39 @@
                 <a href="glossary.html"> Mostrar todo..</a>
             </aside>
         </div>
+        <div class="row">
+            <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php">
+                <div>
+                    <div><label for="image_file">Seleccione un archivo de imagen:</label></div>
+                    <div><input type="file" name="image_file" id="image_file" onchange="fileSelected();" /></div>
+                </div>
+                <div>
+                    <input type="button" value="Upload" onclick="startUploading()" />
+                </div>
+                <div id="fileinfo">
+                    <div id="filename"></div>
+                    <div id="filesize"></div>
+                    <div id="filetype"></div>
+                    <div id="filedim"></div>
+                </div>
+                <div id="error">You should select valid image files only!</div>
+                <div id="error2">An error occurred while uploading the file</div>
+                <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
+                <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
+                <div id="progress_info">
+                    <div id="progress"></div>
+                    <div id="progress_percent">&nbsp;</div>
+                    <div class="clear_both"></div>
+                    <div>
+                        <div id="speed">&nbsp;</div>
+                        <div id="remaining">&nbsp;</div>
+                        <div id="b_transfered">&nbsp;</div>
+                        <div class="clear_both"></div>
+                    </div>
+                    <div id="upload_response"></div>
+                </div>
+            </form>
+        </div>
     </main>
     <footer class="container border-top pt-2 mt-4">
         <section class="row copyright-social d-flex justify-content-between align-items-end 
@@ -173,26 +193,10 @@
                 </li>
             </ul>
         </section>
-        <!-- <section class="row links-editions pt-1">
-            <h2 class="d-none">heading</h2>
-            <ul class="info-list col-12 col-lg-7 mb-1">
-                <li class="d-inline mr-1 pr-1"><a href="#">About Us </a></li>
-                <li class="d-inline mr-1 pr-1"><a href="#">Contact Us </a></li>
-                <li class="d-inline mr-1 pr-1"><a href="#">Copyright </a></li>
-            </ul>
-            <div class="col-12 col-lg-1"></div>
-            <div class="col-12 col-lg-4 d-flex 
-                    justify-content-start justify-content-lg-end">
-                <span class="font-weight-bold text-secondary">Editions:</span>
-                <ul class="editions-list px-2 mb-1">
-                    <li class="d-inline mr-1 pr-1"><a href="#">Spanish</a></li>
-                    <li class="d-inline mr-1 pr-1"><a href="#">English</a></li>
-                </ul>
-            </div>
-        </section> -->
     </footer>
 
     <script src="js/jscript.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
