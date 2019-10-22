@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Odondo App UAP</title>
+    <title>Odonto App UAP</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -138,37 +138,43 @@
             </aside>
         </div>
         <div class="row">
-            <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php">
-                <div>
-                    <div><label for="image_file">Seleccione un archivo de imagen:</label></div>
-                    <div><input type="file" name="image_file" id="image_file" onchange="fileSelected();" /></div>
-                </div>
-                <div>
-                    <input type="button" value="Upload" onclick="startUploading()" />
-                </div>
-                <div id="fileinfo">
-                    <div id="filename"></div>
-                    <div id="filesize"></div>
-                    <div id="filetype"></div>
-                    <div id="filedim"></div>
-                </div>
-                <div id="error">You should select valid image files only!</div>
-                <div id="error2">An error occurred while uploading the file</div>
-                <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
-                <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
-                <div id="progress_info">
-                    <div id="progress"></div>
-                    <div id="progress_percent">&nbsp;</div>
-                    <div class="clear_both"></div>
+            <div class="col-12 col-sm-6">
+                <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php">
                     <div>
-                        <div id="speed">&nbsp;</div>
-                        <div id="remaining">&nbsp;</div>
-                        <div id="b_transfered">&nbsp;</div>
-                        <div class="clear_both"></div>
+                        <div><label for="image_file">Seleccione un archivo de imagen:</label></div>
+                        <div><input type="file" name="image_file" id="image_file" onchange="fileSelected();" /></div>
                     </div>
-                    <div id="upload_response"></div>
-                </div>
-            </form>
+                    <div>
+                        <input type="button" value="Upload" onclick="startUploading()" />
+                    </div>
+                    <div id="fileinfo">
+                        <div id="filename"></div>
+                        <div id="filesize"></div>
+                        <div id="filetype"></div>
+                        <div id="filedim"></div>
+                    </div>
+                    <div id="error">Archivo invalido! Debe seleccionar una archivo de imagen. (jpg, png, etc.)</div>
+                    <div id="warnsize">El archivo es muy grande! Seleccione otro archivo.</div>
+                    <div id="error2">An error occurred while uploading the file</div>
+                    <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
+                    
+                    <div id="progress_info">
+                        <div id="progress"></div>
+                        <div id="progress_percent">&nbsp;</div>
+                        <div class="clear_both"></div>
+                        <div>
+                            <div id="speed">&nbsp;</div>
+                            <div id="remaining">&nbsp;</div>
+                            <div id="b_transfered">&nbsp;</div>
+                            <div class="clear_both"></div>
+                        </div>
+                        <div id="upload_response"></div>
+                    </div>
+                </form>  
+            </div>
+            <div class="col-12 col-sm-6 d-flex justify-content-start">
+                <img class="" id="preview"/>
+            </div>
         </div>
     </main>
     <footer class="container border-top pt-2 mt-4">

@@ -5,6 +5,7 @@ var iPreviousBytesLoaded = 0;
 var iMaxFilesize = 10485760; // 10MB
 var oTimer = 0;
 var sResultFileSize = '';
+
 function secondsToTime(secs) { // we will use this function to convert seconds in normal time format
     var hr = Math.floor(secs / 3600);
     var min = Math.floor((secs - (hr * 3600))/60);
@@ -70,22 +71,22 @@ function startUploading() {
     document.getElementById('abort').style.display = 'none';
     document.getElementById('warnsize').style.display = 'none';
     document.getElementById('progress_percent').innerHTML = '';
-    // var oProgress = document.getElementById('progress');
-    // oProgress.style.display = 'block';
-    // oProgress.style.width = '0px';
-    // // get form data for POSTing
-    // //var vFD = document.getElementById('upload_form').getFormData(); // for FF3
-    // var vFD = new FormData(document.getElementById('upload_form'));
-    // // create XMLHttpRequest object, adding few event listeners, and POSTing our data
-    // var oXHR = new XMLHttpRequest();
-    // oXHR.upload.addEventListener('progress', uploadProgress, false);
-    // oXHR.addEventListener('load', uploadFinish, false);
-    // oXHR.addEventListener('error', uploadError, false);
-    // oXHR.addEventListener('abort', uploadAbort, false);
-    // oXHR.open('POST', 'upload.php');
-    // oXHR.send(vFD);
-    // // set inner timer
-    // oTimer = setInterval(doInnerUpdates, 300);
+    var oProgress = document.getElementById('progress');
+    oProgress.style.display = 'block';
+    oProgress.style.width = '0px';
+    // get form data for POSTing
+    //var vFD = document.getElementById('upload_form').getFormData(); // for FF3
+    var vFD = new FormData(document.getElementById('upload_form'));
+    // create XMLHttpRequest object, adding few event listeners, and POSTing our data
+    var oXHR = new XMLHttpRequest();
+    oXHR.upload.addEventListener('progress', uploadProgress, false);
+    oXHR.addEventListener('load', uploadFinish, false);
+    oXHR.addEventListener('error', uploadError, false);
+    oXHR.addEventListener('abort', uploadAbort, false);
+    oXHR.open('POST', 'upload.php');
+    oXHR.send(vFD);
+    // set inner timer
+    oTimer = setInterval(doInnerUpdates, 300);
 }
 function doInnerUpdates() { // we will use this function to display upload speed
     var iCB = iBytesUploaded;
@@ -136,6 +137,7 @@ function uploadFinish(e) { // upload successfully finished
     clearInterval(oTimer);
 }
 function uploadError(e) { // upload error
+    console.log(e)
     document.getElementById('error2').style.display = 'block';
     clearInterval(oTimer);
 }
