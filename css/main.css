@@ -17,7 +17,7 @@
 }
 #preview {
   background-color:#fff;
-  display:block;
+  display:none;
   float:right;
   width:200px;
 }
