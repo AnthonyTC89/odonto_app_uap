@@ -26,6 +26,7 @@
 * [Main Features](#main-features)
 * [Built With](#built-with)
 * [Installation](#installation)
+* [Potential Future Features](#Potential-Future-Features)
 * [Contact](#Contact)
 
 <!-- ABOUT THE PROJECT -->
@@ -54,6 +55,13 @@ The goal of the project is have a collection of the teeth and get information of
   1. Clone the repository [odonto_app_uap](https://github.com/AnthonyTC89/odonto_app_uap)
   2. Open the file `index.html`
   3. To view the php feature, it's necessary a php server such as [apache](http://www.apache.org/)
+
+### Potential Future Features 
+
+  1. Create a back-end with Rails.
+  2. Use AWS Store.
+  3. Improve styling.
+
 
 ### Contact
 
