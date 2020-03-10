@@ -26,7 +26,7 @@
 * [Main Features](#main-features)
 * [Built With](#built-with)
 * [Installation](#installation)
-* [Future Features](#Potential-Future-Features)
+* [Future Features](#Future-Features)
 * [Contact](#Contact)
 
 <!-- ABOUT THE PROJECT -->
